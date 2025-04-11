@@ -1,18 +1,23 @@
-name : worflow
-on :push
-jobs:
-  fist :
-    steps:
-    -name : hey
-     uses : actions/checkout@v4
-    -name:welcom
-    runs-on :ubuntu-latest
-    run : echo "hello"
-    -name: ls file
-    run : ls
-    -name:read file
-    run: cat README.md
+name: workflow
 
+on: push
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Welcome message
+        run: echo "Hello"
+
+      - name: List files
+        run: ls
+
+      - name: Read README.md
+        run: cat README.md
 
     
 
