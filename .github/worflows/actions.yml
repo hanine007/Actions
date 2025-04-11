@@ -1,0 +1,18 @@
+name : worflow
+on :push
+jobs:
+  fist :
+    steps:
+    -name : hey
+     uses : actions/checkout@v4
+    -name:welcom
+    runs-on :ubuntu-latest
+    run : echo "hello"
+    -name: ls file
+    run : ls
+    -name:read file
+    run: cat README.md
+
+
+    
+
